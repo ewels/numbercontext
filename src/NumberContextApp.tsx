@@ -1,7 +1,5 @@
-"use client";
-
 import { useMemo, useState } from "react";
-import { CONTEXTS, UNIT_KINDS, type ContextEntry, type OutputKind, type UnitKind } from "@/lib/contexts";
+import { CONTEXTS, UNIT_KINDS, type ContextEntry, type OutputKind, type UnitKind } from "./contexts";
 
 type Result = {
   entry: ContextEntry;

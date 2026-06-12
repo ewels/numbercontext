@@ -10,15 +10,8 @@ node_modules/
 
 # Build output and framework caches
 dist/
-.next/
-out/
-.wrangler/
 .vite/
 coverage/
-
-# Local scratch/output folders from this Codex session
-work/
-outputs/
 
 # Environment and secrets
 .env
@@ -35,7 +28,6 @@ pnpm-debug.log*
 
 # TypeScript
 *.tsbuildinfo
-next-env.d.ts
 
 # OS/editor noise
 .DS_Store
