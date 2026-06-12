@@ -55,16 +55,17 @@ The source-backed conversion catalog lives in `src/contexts.ts`. Each entry defi
 Deployment is automated via GitHub Actions (`.github/workflows/deploy.yml`): every
 push to `main` builds the site and publishes `dist/` to GitHub Pages.
 
-One-time setup in the repository:
+One-time setup in the repository: go to **Settings → Pages** and set **Source**
+to **GitHub Actions**.
 
-1. Go to **Settings → Pages** and set **Source** to **GitHub Actions**.
-2. The site is served from the domain root, so the Vite `base` is `/`.
+The site is served as a project page at `https://ewels.github.io/numbercontext/`,
+so the Vite `base` is `/numbercontext/` (see `vite.config.ts`).
 
-### Custom domain
+### Custom domain (later)
 
-`public/CNAME` contains `numbercontext.com`, which is copied into the build output
-so GitHub Pages keeps the custom domain configured on each deploy. To use a
-different domain, edit that file (or remove it to serve from the default
-`*.github.io` URL — in that case set `base` in `vite.config.ts` to
-`/<repo-name>/`). Point the domain's DNS at GitHub Pages and enable
-**Enforce HTTPS** in the Pages settings.
+To serve from `numbercontext.com` once the domain is owned:
+
+1. Set `base` back to `"/"` in `vite.config.ts`.
+2. Add a `public/CNAME` file containing `numbercontext.com`.
+3. Point the domain's DNS at GitHub Pages and enable **Enforce HTTPS** in the
+   Pages settings.
